@@ -24,7 +24,7 @@ jobs:
           target: VMCAD_DEP\
           
       - name: Extract 7z-Zip File
-        run: 7z x path/to/VMoveCAD_DEPS.7z -oVMCAD_DEP/VMoveCAD_DEPS
+        run: 7z x VMoveCAD_DEPS.7z -oVMCAD_DEP/VMoveCAD_DEPS
         shell: powershell
         env:
           VMCAD_DEP: VMCAD_DEP\VMoveCAD_DEPS
