@@ -23,16 +23,16 @@ jobs:
           url: "https://downloads.vcollab.com/VCollab_Build_CI/VMoveCAD/VMoveCAD_DEPS.7z"
           target: VMCAD_DEP\
           
-      - name: Extract 7z-Zip File
-        run: 7z x VMoveCAD_DEPS.7z -oVMCAD_DEP/VMoveCAD_DEPS
-        shell: powershell
-        env:
-          VMCAD_DEP: VMCAD_DEP\VMoveCAD_DEPS
-    
+      - name: extract-7z-action
+        uses: thedoctor0/zip-release@0.7
+        with:
+            pathSource: VMCAD_DEP\VMoveCAD_DEPS.7z 
+            pathTarget: VMCAD_DEP
+            
       - name: Setup MSBuild
         uses: microsoft/setup-msbuild@v1.1
         with:
-          msbuild-architecture: x64
+          msbuild-architecture: x64,x86
 
       - name: Install Windows SDK
         uses: ChristopheLav/windows-sdk-install@v1
@@ -42,7 +42,7 @@ jobs:
 
       - name: Build app for release
         run: |
-          msbuild VMoveCAD.sln /t:rebuild /p:Configuration=Release /p:Platform=x64 /p:WindowsTargetPlatformVersion=10.0.17763.0 /p:UseUnicodeResponseFiles=false /p:EnableParallelBuild=true /p:MaxCpuCount=8 /p:BuildInParallel=true /p:MultiProcessorCompilation=true /p:UseDebugLibraries=false /p:TrackFileAccess=false /p:LinkIncremental=false /p:UsePDB=false /p:CreatePDB=false /p:GenerateFullPaths=false /p:PlatformToolset=v142 /p:EnableJITConcurrency=true /p:EnableMPLogging=true /p:DisableMPLogging=false /p:UseIntelMKL=true /p:FS=true
+          msbuild VMoveCAD.sln /t:rebuild /p:Configuration=Release /p:Platform=x64,x86/p:WindowsTargetPlatformVersion=10.0.17763.0 /p:UseUnicodeResponseFiles=false /p:EnableParallelBuild=true /p:MaxCpuCount=8 /p:BuildInParallel=true /p:MultiProcessorCompilation=true /p:UseDebugLibraries=false /p:TrackFileAccess=false /p:LinkIncremental=false /p:UsePDB=false /p:CreatePDB=false /p:GenerateFullPaths=false /p:PlatformToolset=v142 /p:EnableJITConcurrency=true /p:EnableMPLogging=true /p:DisableMPLogging=false /p:UseIntelMKL=true /p:FS=true
           
           
           
