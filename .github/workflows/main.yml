@@ -23,11 +23,10 @@ jobs:
           url: "https://downloads.vcollab.com/VCollab_Build_CI/VMoveCAD/VMoveCAD_DEPS.7z"
           target: VMCAD_DEP\
           
-      - name: Extract Zip Files
-        uses: einaregilsson/extract-zip@v1
+      - name: Extract 7z-Zip Files
+        uses: mstruebing/7z-action@v1
         with:
-            zipfile: VMCAD_DEP\VMoveCAD_DEPS.7z
-            targetdir: VMCAD_DEP
+         args: e VMCAD_DEP\VMoveCAD_DEPS.7z -oVMCAD_DEP
     
       - name: Setup MSBuild
         uses: microsoft/setup-msbuild@v1.1
@@ -43,5 +42,9 @@ jobs:
       - name: Build app for release
         run: |
           msbuild VMoveCAD.sln /t:rebuild /p:Configuration=Release /p:Platform=x64 /p:WindowsTargetPlatformVersion=10.0.17763.0 /p:UseUnicodeResponseFiles=false /p:EnableParallelBuild=true /p:MaxCpuCount=8 /p:BuildInParallel=true /p:MultiProcessorCompilation=true /p:UseDebugLibraries=false /p:TrackFileAccess=false /p:LinkIncremental=false /p:UsePDB=false /p:CreatePDB=false /p:GenerateFullPaths=false /p:PlatformToolset=v142 /p:EnableJITConcurrency=true /p:EnableMPLogging=true /p:DisableMPLogging=false /p:UseIntelMKL=true /p:FS=true
+          
+          
+          
+          
     
     
