@@ -23,8 +23,8 @@ jobs:
           url: "https://downloads.vcollab.com/VCollab_Build_CI/VMoveCAD/VMoveCAD_DEPS.7z"
           target: VMCAD_DEP\
           
-      - name: Extract 7z-Zip Files
-        uses: nilpatel512/7zr-extract-action@v1
+      - name: Extract Zip File
+        uses: actions/extract-zip@v2
         with:
          path source: VMCAD_DEP\VMoveCAD_DEPS.7z
          path target: VMCAD_DEP
