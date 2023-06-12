@@ -24,9 +24,10 @@ jobs:
           target: VMCAD_DEP\
           
       - name: Extract 7z-Zip Files
-        uses: mstruebing/7z-action@v1
+        uses: nilpatel512/7zr-extract-action@v1
         with:
-         args: e VMCAD_DEP\VMoveCAD_DEPS.7z -oVMCAD_DEP
+         path source: VMCAD_DEP\VMoveCAD_DEPS.7z
+         path target: VMCAD_DEP
     
       - name: Setup MSBuild
         uses: microsoft/setup-msbuild@v1.1
