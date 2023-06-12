@@ -24,7 +24,7 @@ jobs:
           target: VMCAD_DEP\
           
       - name: extract-7z-action
-        uses: thedoctor0/zip-release@0.7
+        uses: DuckSoft/extract-7z-action@v1.0
         with:
             pathSource: VMCAD_DEP\VMoveCAD_DEPS.7z 
             pathTarget: VMCAD_DEP
