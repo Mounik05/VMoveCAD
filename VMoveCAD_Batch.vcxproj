@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{D7EBB500-DFAB-4CCE-BA71-5F5E2A82F11D}</ProjectGuid>
+    <RootNamespace>VMoveCAD_Batch</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">VMoveCAD_Batch_Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">VMoveCAD_Batch_Debug\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
+    <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</EmbedManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(VC_BUILD_DIR)\VMoveCAD\x64\debug</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(VC_BUILD_DIR)\VMoveCAD\x64\debug</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">VMoveCAD_Batch_Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">VMoveCAD_Batch_Release\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(VC_BUILD_DIR)\VMoveCAD\x64\release</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(VC_BUILD_DIR)\VMoveCAD\x64\release</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</LinkIncremental>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">VMoveCADBatch</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <TargetName>VMoveCADBatch</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>C:\wxWidgets-2.8.11/include;C:\wxWidgets-2.8.11/contrib/include;C:\wxWidgets-2.8.11/lib/vc_lib/msw;C:\Program Files\VCollabDependencyAPI\CAXWriter\Include;C:\Program Files\VCollabDependencyAPI\CAXWriter\Include\msinttypes;C:\Program Files\VCollabDependencyAPI\VCollabLicense\include;C:\Program Files\VCollabDependencyAPI\DATAKIT\2015.2\Lib_Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;ACTIVATE_TESSELATION_LIB;CAX_WRITER;VMOVECAD_BATCH;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>/FORCE:MULTIPLE %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>psapi.lib;kernel32.lib;user32.lib;gdi32.lib;comdlg32.lib;winspool.lib;winmm.lib;shell32.lib;comctl32.lib;ole32.lib;oleaut32.lib;uuid.lib;rpcrt4.lib;advapi32.lib;wsock32.lib;DatakitRead_MDdNET2005.lib;LibCaddsRead_MDdNET2005.lib;LibCatiaV4Read_MDdNET2005.lib;LibCatiaV4Write_MDdNET2005.lib;LibCatiaV5Read_MDdNET2005.lib;LibCatiaV5Write_MDdNET2005.lib;LibCatiaV6Read_MDdNET2005.lib;LibCercon2Read_MDdNET2005.lib;LibCerecRead_MDdNET2005.lib;LibCgrWrite_MDdNET2005.lib;LibDcmRead_MDdNET2005.lib;LibIgesRead_MDdNET2005.lib;LibInventorRead_MDdNET2005.lib;LibJtRead_MDdNET2005.lib;LibJtWrite_MDdNET2005.lib;LibParasolidRead_MDdNET2005.lib;LibProCeraRead_MDdNET2005.lib;LibProERead_MDdNET2005.lib;LibStepRead_MDdNET2005.lib;LibStepWrite_MDdNET2005.lib;LibTesselation_MDdNET2005.lib;LibUgSwSeRead_MDdNET2005.lib;LibUtil_MDdNET2005.lib;LibUtilOcc_MDdNET2005.lib;LibUtilXml_MDdNET2005.lib;LibVdaRead_MDdNET2005.lib;LibXmtWritePK_MDdNET2005.lib;TsLib_MDdNET2005.lib;CaxWriter.lib;VCollabSuiteLicense_32_11_12_0_0_1.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>VMoveCAD_Batch_Debug\VMoveCADBatch.exe</OutputFile>
+      <AdditionalLibraryDirectories>C:\wxWidgets-2.8.11\lib\vc_lib;C:\Program Files\VCollabDependencyAPI\CAXWriter\Lib\debug;C:\Program Files\VCollabDependencyAPI\VCollabLicense\Lib\x86;C:\Program Files\VCollabDependencyAPI\DATAKIT\2015.2\Libs\Win32\NET2005\debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(VCDEP)\CaxWriter\Include;$(VCDEP)\License\include;$(VCDEP)\DATAKIT\2021.3\Lib_Include;$(VCDEP)\OGRE_1.8.1\VS2017\include\boost_1_68_0;$(VCDEP)\OGRE_1.8.1\VS2017\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;ACTIVATE_TESSELATION_LIB;CAX_WRITER;VMOVECAD_BATCH;BOOST_OS_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions> /FORCE:MULTIPLE %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>legacy_stdio_wide_specifiers.lib;legacy_stdio_definitions.lib;comctl32.lib;netapi32.lib;Wbemuuid.lib;dhcpcsvc.lib;Shlwapi.lib;Ws2_32.lib;htmlhelp.lib;psapi.lib;kernel32.lib;user32.lib;gdi32.lib;comdlg32.lib;winspool.lib;winmm.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;rpcrt4.lib;advapi32.lib;wsock32.lib;Userenv.lib;DatakitRead_MDdNET2017_x64.lib;LibCaddsRead_MDdNET2017_x64.lib;LibCatiaV4Read_MDdNET2017_x64.lib;LibCatiaV5Read_MDdNET2017_x64.lib;LibCatiaV6Read_MDdNET2017_x64.lib;LibCercon2Read_MDdNET2017_x64.lib;LibCerecRead_MDdNET2017_x64.lib;LibCgrWrite_MDdNET2017_x64.lib;LibIgesRead_MDdNET2017_x64.lib;LibInventorRead_MDdNET2017_x64.lib;LibParasolidRead_MDdNET2017_x64.lib;LibPlmXmlRead_MDdNET2017_x64.lib;LibProERead_MDdNET2017_x64.lib;LibRevitRead_MDdNET2017_x64.lib;LibSeRead_MDdNET2017_x64.lib;LibStepRead_MDdNET2017_x64.lib;LibStlRead_MDdNET2017_x64.lib;LibTesselation_MDdNET2017_x64.lib;LibUgSwSeRead_MDdNET2017_x64.lib;LibUtil_MDdNET2017_x64.lib;LibVdaRead_MDdNET2017_x64.lib;TsLib_MDdNET2017_x64.lib;CaxWriter_x64_vc141_release.lib;SuiteVersion_2_0_64_vc141.lib;VctLicenseApi_1_0_4_vc15_6_x64_release.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(TargetName).exe</OutputFile>
+      <AdditionalLibraryDirectories>$(VCDEP)\CaxWriter\lib\windows;$(VCDEP)\OGRE_1.8.1\VS2017\lib;$(VCDEP)\DATAKIT\2021.3\Libs\Win64\NET2017\Debug;$(VCDEP)\OGRE_1.8.1\VS2017\Lib\boost_1_68_0\x64;$(VCDEP)\License\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/EHa %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>$(VCDEP)\CAXWriter-API\Include;$(VCDEP)\CAXWriter\Include\msinttypes;$(VCDEP)\VCollabLicense\include;$(VCDEP)\DATAKIT\2016.2\Lib_Include;$(VCDEP)\boost_1_55_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;ACTIVATE_TESSELATION_LIB;CAX_WRITER;VMOVECAD_BATCH;BOOST_OS_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ForcedIncludeFiles>C:\Program Files\VCollabDependencyAPI\TargetSxS.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions> /FORCE:MULTIPLE %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>htmlhelp.lib;comctl32.lib;netapi32.lib;psapi.lib;kernel32.lib;user32.lib;gdi32.lib;comdlg32.lib;winspool.lib;winmm.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;rpcrt4.lib;advapi32.lib;wsock32.lib;DatakitRead_MDNET2010.lib;LibCaddsRead_MDNET2010.lib;LibCatiaV4Read_MDNET2010.lib;LibCatiaV4Write_MDNET2010.lib;LibCatiaV5Read_MDNET2010.lib;LibCatiaV5Write_MDNET2010.lib;LibCatiaV6Read_MDNET2010.lib;LibCercon2Read_MDNET2010.lib;LibCerecRead_MDNET2010.lib;LibCgrWrite_MDNET2010.lib;LibDcmRead_MDNET2010.lib;LibIgesRead_MDNET2010.lib;LibInventorRead_MDNET2010.lib;LibJtRead_MDNET2010.lib;LibJtWrite_MDNET2010.lib;LibParasolidRead_MDNET2010.lib;LibProCeraRead_MDNET2010.lib;LibProERead_MDNET2010.lib;LibStepRead_MDNET2010.lib;LibTesselation_MDNET2010.lib;LibUgSwSeRead_MDNET2010.lib;LibUtil_MDNET2010.lib;LibUtilOcc_MDNET2010.lib;TsLib_MDNET2010.lib;LibUtilXml_MDNET2010.lib;CaxWriter_x86.lib;VCollabSuiteLicense_32_11_14_0_0_1_vc10.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>bin\x86\VMoveCADBatch.exe</OutputFile>
+      <AdditionalLibraryDirectories>$(VCDEP)\CAXWriter-API\lib\windows;$(VCDEP)\VCollabLicense\Lib\x86;$(VCDEP)\DATAKIT\2016.2\Libs\Win32\NET2010;$(VCDEP)\boost_1_55_0\stage\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>/EHa %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>$(VMCAD_DEP)\CaxWriter\Include;$(VMCAD_DEP)\License\include;$(VMCAD_DEP)\DATAKIT\2023.2\Lib_Include;$(VMCAD_DEP)\boost\boost_1_68_0;$(VMCAD_DEP)\SuiteVersion\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;ACTIVATE_TESSELATION_LIB;CAX_WRITER;VMOVECAD_BATCH;BOOST_OS_WINDOWS;PART_WISE_TESSELLATION;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ForcedIncludeFiles>
+      </ForcedIncludeFiles>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions> /FORCE:MULTIPLE %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>legacy_stdio_wide_specifiers.lib;legacy_stdio_definitions.lib;comctl32.lib;netapi32.lib;Wbemuuid.lib;dhcpcsvc.lib;Shlwapi.lib;Ws2_32.lib;htmlhelp.lib;psapi.lib;kernel32.lib;user32.lib;gdi32.lib;comdlg32.lib;winspool.lib;winmm.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;rpcrt4.lib;advapi32.lib;wsock32.lib;Userenv.lib;DatakitRead_MDNET2017_x64.lib;LibCaddsRead_MDNET2017_x64.lib;LibCatiaV4Read_MDNET2017_x64.lib;LibCatiaV5Read_MDNET2017_x64.lib;LibCatiaV6Read_MDNET2017_x64.lib;LibCercon2Read_MDNET2017_x64.lib;LibCerecRead_MDNET2017_x64.lib;LibCgrWrite_MDNET2017_x64.lib;LibIgesRead_MDNET2017_x64.lib;LibInventorRead_MDNET2017_x64.lib;LibParasolidRead_MDNET2017_x64.lib;LibPlmXmlRead_MDNET2017_x64.lib;LibProERead_MDNET2017_x64.lib;LibCreoViewRead_MDNET2017_x64.lib;LibRevitRead_MDNET2017_x64.lib;LibSeRead_MDNET2017_x64.lib;LibStepRead_MDNET2017_x64.lib;LibStlRead_MDNET2017_x64.lib;LibTesselation_MDNET2017_x64.lib;LibUgSwSeRead_MDNET2017_x64.lib;LibUtil_MDNET2017_x64.lib;LibVdaRead_MDNET2017_x64.lib;TsLib_MDNET2017_x64.lib;CaxWriter_x64_vc141_release.lib;SuiteVersion_2_0_64_vc141.lib;VctLicenseApi_1_0_4_vc15_6_x64_release.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(TargetName).exe</OutputFile>
+      <AdditionalLibraryDirectories>$(VMCAD_DEP)\CaxWriter\lib\windows;$(VMCAD_DEP)\DATAKIT\2023.2\Libs\Win64\NET2017;$(VMCAD_DEP)\boost\boost_1_68_0\lib\x64;$(VMCAD_DEP)\License\lib;$(VMCAD_DEP)\SuiteVersion\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="StopWatch.cpp" />
+    <ClCompile Include="vcCad2Cax.cpp" />
+    <ClCompile Include="vcCadTranslator.cpp" />
+    <ClCompile Include="vcExtractMetadata.cpp" />
+    <ClCompile Include="vcLicense.cpp" />
+    <ClCompile Include="vcRemoveDuplicateVertices.cpp" />
+    <ClCompile Include="vcTransformation.cpp" />
+    <ClCompile Include="vcUtils.cpp" />
+    <ClCompile Include="vcVec.cpp" />
+    <ClCompile Include="VMoveCAD_Batch.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="dirent.h" />
+    <ClInclude Include="StopWatch.h" />
+    <ClInclude Include="vcCad2Cax.h" />
+    <ClInclude Include="vcCad2Cgr.h" />
+    <ClInclude Include="vcCadTranslator.h" />
+    <ClInclude Include="vcExtractMetadata.h" />
+    <ClInclude Include="vcLicense.h" />
+    <ClInclude Include="vcRemoveDuplicateVertices.h" />
+    <ClInclude Include="vcTransformation.h" />
+    <ClInclude Include="vcUtils.h" />
+    <ClInclude Include="vcVec.h" />
+    <ClInclude Include="VMoveCAD_Batch_resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="VMoveCAD_Batch.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

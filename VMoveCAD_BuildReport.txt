@@ -1,0 +1,7 @@
+
+VMoveCAD 2018 R1 - 3.0.519.101
+==============================
+
+1. Integrated with DATAKIT 2019.1 SP1
+2. CadInfo Fix: CadInfo conversion time is optimized for large File (Jonni’s IGES issue)
+

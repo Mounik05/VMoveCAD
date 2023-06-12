@@ -1,0 +1,238 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+#include "../version.h"
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#include ""res\\VMoveCAD_MFC_GUI.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""     // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\VMoveCAD_MFC_GUI.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About VMoveCAD 2013"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "VMoveCAD",IDC_VERSION_STATIC,40,10,130,8,SS_NOPREFIX
+    LTEXT           "Visual Collaboration Technologies Inc. Copyright (C) 2013",IDC_STATIC,40,25,188,8
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,16,WS_GROUP
+END
+
+IDD_VMOVECAD_MFC_GUI_DIALOG DIALOGEX 0, 0, 219, 207
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "VMoveCAD 2013"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Translate",IDOK,6,184,44,16,0,WS_EX_STATICEDGE
+    PUSHBUTTON      "Close",IDCANCEL,168,184,44,16,0,WS_EX_STATICEDGE
+    CONTROL         "File",IDC_FILE_RADIO,"Button",BS_AUTORADIOBUTTON,13,18,27,10
+    GROUPBOX        "Input Mode",IDC_STATIC,7,3,99,32
+    CONTROL         "Directory",IDC_DIRECTORY_RADIO,"Button",BS_AUTORADIOBUTTON,56,18,45,10
+    GROUPBOX        "Output File Type",IDC_STATIC,114,3,98,32
+    LTEXT           "Format",IDC_STATIC,125,18,24,8
+    COMBOBOX        IDC_OUTPUT_FORMAT_COMBO,157,16,48,71,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Input",IDC_STATIC,7,42,205,36
+    LTEXT           "Input CAD File",IDC_INPUT_FILE_STATIC,10,58,53,8
+    EDITTEXT        IDC_INPUT_FILE_EDIT,66,55,123,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_INPUT_BUTTON,191,55,20,14,0,WS_EX_STATICEDGE
+    GROUPBOX        "Output",IDC_STATIC,7,84,205,36
+    LTEXT           "Output  File",IDC_OUTPUT_FILE_STATIC,9,100,56,8
+    EDITTEXT        IDC_OUTPUT_FILE_EDIT,66,97,123,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_OUTPUT_BUTTON,191,97,20,14,0,WS_EX_STATICEDGE
+    LTEXT           "Tessellation Tolerance",IDC_STATIC,11,142,72,8
+    EDITTEXT        IDC_TESS_TOLERANCE_EDIT,86,139,29,14,ES_AUTOHSCROLL
+    CONTROL         "Ignore Transparency",IDC_IGNORE_TRANS_CHECK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,159,83,10
+    PUSHBUTTON      "About...",IDC_ABOUT_BUTTON,60,184,44,16,0,WS_EX_STATICEDGE
+    PUSHBUTTON      "Help...",IDC_HELP_BUTTON,114,184,44,16,0,WS_EX_STATICEDGE
+    LTEXT           "Units",IDC_STATIC,138,142,17,8
+    COMBOBOX        IDC_UNITS_COMBO,159,140,50,60,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Options",IDC_STATIC,7,126,205,50
+    CONTROL         "Detailed Log",IDC_DETAILED_LOG_CHECK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,138,159,55,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION VERSION
+ PRODUCTVERSION VERSION
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "Comments", COMMENTS_STR
+            VALUE "CompanyName", "Visual Collaboration Technologies Inc."
+            VALUE "FileDescription", FILE_DESCRIPTION_STR
+            VALUE "FileVersion", VERSION_STR
+            VALUE "InternalName", "VMoveCAD"
+            VALUE "LegalCopyright", "Copyright (C) 2013"
+            VALUE "OriginalFilename", "VMoveCAD"
+            VALUE "ProductName", "VMoveCAD"
+            VALUE "ProductVersion", VERSION_STR
+            VALUE "SpecialBuild", "FLEXlm V10.8"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_VMOVECAD_MFC_GUI_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 212
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 200
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_VMOVECAD_MFC_GUI_DIALOG DLGINIT
+BEGIN
+    IDC_OUTPUT_FORMAT_COMBO, 0x403, 4, 0
+0x6163, 0x0078,
+    IDC_OUTPUT_FORMAT_COMBO, 0x403, 4, 0
+0x6763, 0x0072,
+    IDC_UNITS_COMBO, 0x403, 11, 0
+0x694d, 0x6c6c, 0x4d69, 0x7465, 0x7265, "\000"
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_ABOUTBOX            "&About VMoveCAD_MFC_GUI..."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#include "res\VMoveCAD_MFC_GUI.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"     // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
