@@ -23,12 +23,12 @@ jobs:
           url: "https://downloads.vcollab.com/VCollab_Build_CI/VMoveCAD/VMoveCAD_DEPS.7z"
           target: VMCAD_DEP\
           
-      - name: Checkout repository
-        uses: actions/checkout@v2
-      
-      - name: Extract Dependencies
-        run: |
-           unzip ${{ env.VMCAD_DEP }}/VMoveCAD_DEPS.7z -d VMCAD_DEP
+          
+      - name: extract-7z-action
+        uses: DuckSoft/extract-7z-action@v1.0
+        with:
+            pathSource: VMCAD_DEP\VMoveCAD_DEPS.7z 
+            pathTarget: VMCAD_DEP
             
       - name: Setup MSBuild
         uses: microsoft/setup-msbuild@v1.1
@@ -41,10 +41,12 @@ jobs:
           version-sdk: 17763
           features: 'OptionId.DesktopCPPx64,OptionId.DesktopCPPx86,OptionId.DesktopCPParm64'
 
-      - name: Build app for release
+      - name: Build Solutions
         run: |
-          msbuild VMoveCAD.sln /p:Configuration=Release /p:Platform=x64 /p:WindowsTargetPlatformVersion=10.0.17763.0 /p:UseUnicodeResponseFiles=false /p:EnableParallelBuild=true /p:MaxCpuCount=8 /p:BuildInParallel=true /p:MultiProcessorCompilation=true /p:UseDebugLibraries=false /p:TrackFileAccess=false /p:LinkIncremental=false /p:UsePDB=false /p:CreatePDB=false /p:GenerateFullPaths=false /p:PlatformToolset=v142 /p:EnableJITConcurrency=true /p:EnableMPLogging=true /p:DisableMPLogging=false /p:UseIntelMKL=true /p:FS=true
- 
+          for %%f in (VMoveCAD.sln) do (
+            msbuild "%%f" /t:rebuild /p:Configuration=Release /p:Platform=x64
+          )
+        shell: cmd
          
           
     
