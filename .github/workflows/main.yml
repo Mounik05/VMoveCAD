@@ -26,8 +26,8 @@ jobs:
         run: |
           & 'C:\Program Files\7-Zip\7z.exe' x 'VMCAD_DEP\VMoveCAD_DEPS.7z' -o'VMCAD_DEP'
              
-      - name: Setup MSBuild
-        uses: warrenbuckley/Setup-MSBuild@v1
+      - name: msbuild project generator
+        uses: tix-factory/msbuild-project-generator@v1.0.1
         with:
           msbuild-architecture: x64
 
