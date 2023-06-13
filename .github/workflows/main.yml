@@ -27,11 +27,11 @@ jobs:
         run: |
           & 'C:\Program Files\7-Zip\7z.exe' x 'VMCAD_DEP\VMoveCAD_DEPS.7z' -o'VMCAD_DEP'
              
-     
-      - name: macmade - msbuild
-        uses: macmade/action-msbuild@main
+      - name: setup-msbuild
+        uses: microsoft/setup-msbuild@v1.1
         with:
           msbuild-architecture: x64
+
 
       - name: Install Windows SDK
         uses: ChristopheLav/windows-sdk-install@v1
