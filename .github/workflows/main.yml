@@ -31,7 +31,7 @@ jobs:
       - name: macmade - msbuild
         uses: macmade/action-msbuild@main
         with:
-          msbuild-architecture: x64,x86
+          msbuild-architecture: x64
 
       - name: Install Windows SDK
         uses: ChristopheLav/windows-sdk-install@v1
@@ -41,10 +41,7 @@ jobs:
 
       - name: Build Solutions
         run: |
-          for %%f in (VMoveCAD.sln) do (
-            msbuild "%%f" /t:rebuild /p:Configuration=Release /p:Platform=x64
-          )
-        shell: cmd
+            msbuild VMoveCAD.sln /m -t:rebuild /p:Configuration=Release /p:Platform=x64 /p:WindowsTargetPlatformVersion=10.0.17763.0
           
     
     
