@@ -37,10 +37,10 @@ jobs:
           features: 'OptionId.DesktopCPPx64,OptionId.DesktopCPPx86,OptionId.DesktopCPParm64'
           
       - name: Add MSBuild to PATH
-        run: echo "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\MSBuild\Current\Bin" >> $GITHUB_PATH
+        run: echo "C:\Program Files(x86)\Microsoft Visual Studio 8\VSDA\Bin" >> $GITHUB_PATH
 
       - name: Build VMoveCAD
-        run: msbuild VMoveCAD.sln -t:rebuild /p:Configuration=Release /p:Platform=x64 /p:WindowsTargetPlatformVersion=10.0.17763.0 "/p:C:\Program Files\include\datakit.h"
+        run: msbuild VMoveCAD.sln -t:rebuild /p:Configuration=Release /p:Platform=x64 /p:WindowsTargetPlatformVersion=10.0.17763.0
         shell: pwsh
         
         
