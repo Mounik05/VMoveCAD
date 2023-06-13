@@ -28,10 +28,10 @@ jobs:
           & 'C:\Program Files\7-Zip\7z.exe' x 'VMCAD_DEP\VMoveCAD_DEPS.7z' -o'VMCAD_DEP'
              
      
-      - name: Setup .NET Core
-        uses: actions/setup-dotnet@v1
+      - name: macmade - msbuild
+        uses: macmade/action-msbuild@main
         with:
-          dotnet-version: '3.1'
+          msbuild-architecture: x64,x86
 
       - name: Install Windows SDK
         uses: ChristopheLav/windows-sdk-install@v1
@@ -41,8 +41,10 @@ jobs:
 
       - name: Build Solutions
         run: |
-             dotnet build VMoveCAD.sln /p:Configuration=Release /p:Platform=x64
-         
+          for %%f in (VMoveCAD.sln) do (
+            msbuild "%%f" /t:rebuild /p:Configuration=Release /p:Platform=x64
+          )
+        shell: cmd
           
     
     
