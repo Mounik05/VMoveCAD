@@ -11,9 +11,10 @@ jobs:
     env:
        VMCAD_DEP: VMCAD_DEP\VMoveCAD_DEPS
         
+   
     steps:
-      - uses: actions/checkout@v2.3.4
-      
+      - uses: actions/checkout@master
+
       - uses: suisei-cn/actions-download-file@v1.0.1
         id: download_file  # Remember to give an ID if you need the output filename
         name: Download the file from url
