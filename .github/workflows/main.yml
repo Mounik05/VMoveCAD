@@ -36,12 +36,11 @@ jobs:
           version-sdk: 17763
           features: 'OptionId.DesktopCPPx64,OptionId.DesktopCPPx86,OptionId.DesktopCPParm64'
           
-      - name: Build app for release
-        run: |
-         # Custom script for building solution
-         $solutionPath = "VMoveCAD.sln"
-         $msbuildPath = "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\MSBuild\Current\Bin\MSBuild.exe"
-         & $msbuildPath $solutionPath /t:rebuild /p:Configuration=Release /p:Platform=x64
-              
+      - name: Build Solution
+        uses: warrenbuckley/MSBuild@v1
+        with:
+          solution: path/to/solution.sln
+          configuration: Release
+          platform: x64
         
        
