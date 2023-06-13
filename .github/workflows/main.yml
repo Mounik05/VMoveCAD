@@ -42,7 +42,7 @@ jobs:
 
       - name: Build Solutions
         run: |
-          $solutions = "VMoveCAD.sln", "VMoveCAD_Batch.sln", "VMoveCAD_MFC_GUI.sln"
+          $solutions = "VMoveCAD.sln"
           foreach ($solution in $solutions) {
             Write-Host "Building solution: $solution"
             msbuild $solution /p:Configuration=Release
