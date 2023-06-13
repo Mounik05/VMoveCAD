@@ -11,9 +11,8 @@ jobs:
     env:
        VMCAD_DEP: VMCAD_DEP\VMoveCAD_DEPS
         
-   
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v2.3.4
 
       - uses: suisei-cn/actions-download-file@v1.0.1
         id: download_file  # Remember to give an ID if you need the output filename
@@ -25,6 +24,11 @@ jobs:
       - name: Extract Zip File
         run: |
           & 'C:\Program Files\7-Zip\7z.exe' x 'VMCAD_DEP\VMoveCAD_DEPS.7z' -o'VMCAD_DEP'
+          
+      - name: setup-msbuild
+        uses: microsoft/setup-msbuild@v1.1
+        with:
+          msbuild-architecture: x64  
              
       - name: Install Windows SDK
         uses: ChristopheLav/windows-sdk-install@v1
@@ -32,19 +36,12 @@ jobs:
           version-sdk: 17763
           features: 'OptionId.DesktopCPPx64,OptionId.DesktopCPPx86,OptionId.DesktopCPParm64'
           
-      - name: Setup NuGet.exe
-        uses: nuget/setup-nuget@v1
-        with:
-          nuget-version: ${{ matrix.nuget }}
-          
       - name: Build app for release
-        run: nuget restore VMoveCAD.sln  
-        
-        
-        
-       
-
-       
-     
+        run: |
+         # Custom script for building solution
+         $solutionPath = "VMoveCAD.sln"
+         $msbuildPath = "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\MSBuild\Current\Bin\MSBuild.exe"
+         & $msbuildPath $solutionPath /t:rebuild /p:Configuration=Release /p:Platform=x64
+              
         
        
