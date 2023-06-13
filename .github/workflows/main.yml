@@ -28,8 +28,7 @@ jobs:
       
       - name: Extract Dependencies
         run: |
-          mkdir VMCAD_DEP
-          unzip ${{ env.VMCAD_DEP }}/VMoveCAD_DEPS.7z -d VMCAD_DEP
+           unzip ${{ env.VMCAD_DEP }}/VMoveCAD_DEPS.7z -d VMCAD_DEP
             
       - name: Setup MSBuild
         uses: microsoft/setup-msbuild@v1.1
