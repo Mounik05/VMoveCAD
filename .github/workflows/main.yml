@@ -42,10 +42,11 @@ jobs:
 
       - name: Build Solutions
         run: |
-          for %%f in (VMoveCAD.sln, VMoveCAD_Batch.sln, VMoveCAD_MFC_GUI.sln) do (
-            echo "Building solution: %%f"
-            msbuild "%%f" /p:Configuration=Release
-          )
+          $solutions = "VMoveCAD.sln", "VMoveCAD_Batch.sln", "VMoveCAD_MFC_GUI.sln"
+          foreach ($solution in $solutions) {
+            Write-Host "Building solution: $solution"
+            msbuild $solution /p:Configuration=Release
+          }
         
         
         
