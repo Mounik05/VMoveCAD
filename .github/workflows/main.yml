@@ -23,13 +23,11 @@ jobs:
           url: "https://downloads.vcollab.com/VCollab_Build_CI/VMoveCAD/VMoveCAD_DEPS.7z"
           target: VMCAD_DEP\
           
-          
-      - name: extract-7z-action
-        uses: DuckSoft/extract-7z-action@v1.0
-        with:
-            pathSource: VMCAD_DEP\VMoveCAD_DEPS.7z 
-            pathTarget: VMCAD_DEP
-            
+      - name: Extract Zip File
+        run: |
+          & 'C:\Program Files\7-Zip\7z.exe' x 'VMCAD_DEP\VMoveCAD_DEPS.7z' -o'VMCAD_DEP'
+             
+     
       - name: Setup MSBuild
         uses: microsoft/setup-msbuild@v1.1
         with:
