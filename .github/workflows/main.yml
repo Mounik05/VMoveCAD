@@ -26,26 +26,17 @@ jobs:
         run: |
           & 'C:\Program Files\7-Zip\7z.exe' x 'VMCAD_DEP\VMoveCAD_DEPS.7z' -o'VMCAD_DEP'
              
-      - name: Setup MSBuild.exe
-        uses: microsoft/setup-msbuild@v1.1
-        with:
-           vs-prerelease: true
-           msbuild-architecture: 'x64'
-
       - name: Install Windows SDK
         uses: ChristopheLav/windows-sdk-install@v1
         with:
           version-sdk: 17763
           features: 'OptionId.DesktopCPPx64,OptionId.DesktopCPPx86,OptionId.DesktopCPParm64'
           
-      - name: Add MSBuild to PATH
-        run: echo "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\MSBuild\Current\Bin" >> $GITHUB_PATH
-
-     
-      - name: Build app for release
-        run: msbuild VMoveCAD.sln -t:rebuild /p:Configuration=Release /p:Platform=x64 /p:WindowsTargetPlatformVersion=10.0.17763.0
-        shell: pwsh
-        
+      - name: Setup NuGet.exe
+        uses: nuget/setup-nuget@v1
+        with:
+          nuget-version: ${{ matrix.nuget }}
+      - run: nuget restore VMoveCAD.sln
         
         
         
