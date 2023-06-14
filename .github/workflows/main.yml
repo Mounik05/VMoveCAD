@@ -38,7 +38,7 @@ jobs:
           features: 'OptionId.DesktopCPPx64,OptionId.DesktopCPPx86,OptionId.DesktopCPParm64'
           
       - name: Restore NuGet packages
-        run: msbuild Path/To/Solution1.sln -t:restore
+        run: msbuild VMoveCAD.sln -t:restore
         env:
           VMCAD_DEP: VMCAD_DEP\VMoveCAD_DEPS
           
