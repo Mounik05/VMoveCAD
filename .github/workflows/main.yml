@@ -8,6 +8,7 @@ on:
 jobs:
  build:
     runs-on: windows-latest
+  
     env:
        VMCAD_DEP: VMCAD_DEP\VMoveCAD_DEPS
         
@@ -35,7 +36,7 @@ jobs:
           features: 'OptionId.DesktopCPPx64,OptionId.DesktopCPPx86,OptionId.DesktopCPParm64'
           
       - name: Restore NuGet packages
-        run: msbuild path/to/YourSolution.sln -t:restore
+        run: msbuild  project:VMoveCAD.sln -t:restore
         env:
           VMCAD_DEP: VMCAD_DEP\VMoveCAD_DEPS
              
