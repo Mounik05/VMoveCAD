@@ -37,11 +37,18 @@ jobs:
           version-sdk: 17763
           features: 'OptionId.DesktopCPPx64,OptionId.DesktopCPPx86,OptionId.DesktopCPParm64'
           
-      - name: Build app for release 
+      - name: Restore NuGet packages
+        run: msbuild Path/To/Solution1.sln -t:restore
+        env:
+          VMCAD_DEP: VMCAD_DEP\VMoveCAD_DEPS
+          
+      - name: Build Solutions
         run: |
-           msbuild VMoveCAD.sln /m  -t:rebuild /p:Configuration=Release /p:Platform=x64 /p:WindowsTargetPlatformVersion=10.0.17763.0
-               
-       
+         $solutions = "VMoveCAD.sln"
+         foreach ($solution in $solutions) {
+          Write-Host "Building $solution"
+           msbuild $solution
+         }
              
          
            
