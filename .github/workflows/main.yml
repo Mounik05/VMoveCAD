@@ -32,7 +32,7 @@ jobs:
         uses: tix-factory/msbuild-project-generator@v1
         with:
          directory: ./VMoveCAD
-         projectFile: ./build.project 
+         projectFile: ./build.project VMoveCAD.sln 
 
       - name: Install Windows SDK
         uses: ChristopheLav/windows-sdk-install@v1
