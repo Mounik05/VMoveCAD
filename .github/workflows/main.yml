@@ -31,8 +31,8 @@ jobs:
       - name: Generate msbuild project file
         uses: tix-factory/msbuild-project-generator@v1
         with:
-         directory: ./
-         projectFile: ./build.project
+         directory: ./VMoveCAD
+         projectFile: ./build.project 
 
       - name: Install Windows SDK
         uses: ChristopheLav/windows-sdk-install@v1
