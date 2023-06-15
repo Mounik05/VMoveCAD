@@ -8,7 +8,6 @@ on:
 jobs:
  build:
     runs-on: windows-latest
-  
     env:
        VMCAD_DEP: VMCAD_DEP\VMoveCAD_DEPS
         
@@ -28,11 +27,12 @@ jobs:
             pathsource: VMCAD_DEP\VMoveCAD_DEPS.7z
             pathtarget: VMCAD_DEP
             
-      - name: Setup .NET
+      - name: Run actions/setup-dotnet
         uses: actions/setup-dotnet@v1
         with:
           dotnet-version: 5.0
-        
+          
+          
       - name: Install Windows SDK
         uses: ChristopheLav/windows-sdk-install@v1
         with:
