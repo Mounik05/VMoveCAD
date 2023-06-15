@@ -30,7 +30,7 @@ jobs:
       - name: Run actions/setup-dotnet
         uses: actions/setup-dotnet@v1
         with:
-          dotnet-version: 5.0
+          dotnet-version: 5.0.0
           
           
       - name: Install Windows SDK
