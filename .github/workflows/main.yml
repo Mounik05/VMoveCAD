@@ -28,31 +28,20 @@ jobs:
             pathsource: VMCAD_DEP\VMoveCAD_DEPS.7z
             pathtarget: VMCAD_DEP
             
-      - name: Run msbuild-project-generator
-        uses: tix-factory/msbuild-project-generator@v1
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v1
         with:
-         directory: D:\a\VMoveCAD\VMoveCAD
-         projectFile: ./VMoveCAD.sln
-        env:
-          VMCAD_DEP: VMCAD_DEP\VMoveCAD_DEPS
-
+          dotnet-version: 5.0
+        
       - name: Install Windows SDK
         uses: ChristopheLav/windows-sdk-install@v1
         with:
           version-sdk: 17763
           features: 'OptionId.DesktopCPPx64,OptionId.DesktopCPPx86,OptionId.DesktopCPParm64'
           
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v1
-        with:
-          dotnet-version: 5.0
-
-      - name: Restore NuGet packages
-        run: dotnet restore VMoveCAD.sln
-          
       - name: Build Solutions
         run: |
-         msbuild VMoveCAD.sln  -t:rebuild /p:Configuration=Release /p:Platform=x64 /p:WindowsTargetPlatformVersion=10.0.17763.0
+         msbuild VMoveCAD.sln -t:rebuild /p:Configuration=Release /p:Platform=x64 /p:WindowsTargetPlatformVersion=10.0.17763.0
          
              
          
