@@ -33,7 +33,8 @@ jobs:
           version-sdk: 17763
           features: 'OptionId.DesktopCPPx64,OptionId.DesktopCPPx86,OptionId.DesktopCPParm64'
           
-      - uses: UseDotNet@2
+      - name: UseDotNet@2
+        uses: docker://image:tag
         with:
               version: '6.x'
               includePreviewVersions: true
