@@ -43,7 +43,7 @@ jobs:
       - name: Build Solutions
         shell: pwsh
         run: |
-          Set-Location -Path 'D:\a\VMoveCAD'
+          cd D:\a\VMoveCAD
           msbuild VMoveCAD.sln /p:Configuration=Release
           msbuild VMoveCAD_Batch.sln /p:Configuration=Release
           msbuild CadInfo.sln /p:Configuration=Release
