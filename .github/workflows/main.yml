@@ -41,6 +41,7 @@ jobs:
               includePreviewVersions: true
 
       - name: Build Solutions
+        shell: pwsh
         run: |
           msbuild VMoveCAD.sln /p:Configuration=Release
           msbuild VMoveCAD_Batch.sln /p:Configuration=Release
