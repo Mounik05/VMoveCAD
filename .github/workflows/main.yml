@@ -34,7 +34,8 @@ jobs:
           features: 'OptionId.DesktopCPPx64,OptionId.DesktopCPPx86,OptionId.DesktopCPParm64'
           
       - name: UseDotNet@2
-        uses: owner/repo@ref
+        uses: actions/checkout@v2.3.4
+
         with:
               version: '6.x'
               includePreviewVersions: true
