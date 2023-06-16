@@ -36,8 +36,10 @@ jobs:
       - name: setup-msbuild
         uses: microsoft/setup-msbuild@v1.1
         with:
-          msbuild-architecture: x64
-
+            solutionFile: 'VMoveCAD.sln'
+            configuration: 'Release'
+          
+    
       - name: Build Solutions
         run: |
          cd 'D:\a\VMoveCAD\VMoveCAD'
