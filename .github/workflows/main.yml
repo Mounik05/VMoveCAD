@@ -33,7 +33,7 @@ jobs:
           version-sdk: 17763
           features: 'OptionId.DesktopCPPx64,OptionId.DesktopCPPx86,OptionId.DesktopCPParm64'
           
-      - name: setup-msbuild
+      - name: Run Local Action
         uses: ./.github/actions/Mounik05/VMoveCAD
         with:
             solutionFile: 'VMoveCAD.sln'
