@@ -36,14 +36,14 @@ jobs:
       - name: setup-msbuild
         uses: microsoft/setup-msbuild@v1.1
         with:
-          msbuild-architecture: x64,x86
+          msbuild-architecture: x64
 
       - name: Build Solutions
         run: |
-         msbuild VMoveCAD.sln /p:Configuration=Release /p:Platform=x64,x86/p:WindowsTargetPlatformVersion=10.0.17763.0
-         msbuild VMoveCAD_Batch.sln /p:Configuration=Release /p:Platform=x64,x86/p:WindowsTargetPlatformVersion=10.0.17763.0
-         msbuild CadInfo.sln /p:Configuration=Release /p:Platform=x64,x86 /p:WindowsTargetPlatformVersion=10.0.17763.0
-         msbuild VMoveCAD_MFC_GUI\VMoveCAD_MFC_GUI.sln /p:Configuration=Release /p:Platform=x64,x86 /p:WindowsTargetPlatformVersion=10.0.17763.0
+         msbuild VMoveCAD.sln /p:Configuration=Release /p:Platform=x64 /p:WindowsTargetPlatformVersion=10.0.17763.0
+         msbuild VMoveCAD_Batch.sln /p:Configuration=Release /p:Platform=x64 /p:WindowsTargetPlatformVersion=10.0.17763.0
+         msbuild CadInfo.sln /p:Configuration=Release /p:Platform=x64 /p:WindowsTargetPlatformVersion=10.0.17763.0
+         msbuild VMoveCAD_MFC_GUI\VMoveCAD_MFC_GUI.sln /p:Configuration=Release /p:Platform=x64 /p:WindowsTargetPlatformVersion=10.0.17763.0
          
           
                 
