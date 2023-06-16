@@ -34,7 +34,7 @@ jobs:
           features: 'OptionId.DesktopCPPx64,OptionId.DesktopCPPx86,OptionId.DesktopCPParm64'
           
       - name: setup-msbuild
-        uses: UseDotNet@2
+        uses: Mounik05/VMoveCAD@ref
         with:
             solutionFile: 'VMoveCAD.sln'
             configuration: 'Release'
