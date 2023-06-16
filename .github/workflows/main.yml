@@ -14,9 +14,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2.3.4
 
-      - uses: suisei-cn/actions-download-file@v1.0.1
-        id: download_file  # Remember to give an ID if you need the output filename
-        name: Download the file from url
+      - name: Download the file from url
+        id: download_file  
+        uses: suisei-cn/actions-download-file@v1.0.1
         with:
           url: "https://downloads.vcollab.com/VCollab_Build_CI/VMoveCAD/VMoveCAD_DEPS.7z"
           target: VMCAD_DEP\
