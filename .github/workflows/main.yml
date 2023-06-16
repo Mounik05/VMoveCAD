@@ -33,17 +33,14 @@ jobs:
           version-sdk: 17763
           features: 'OptionId.DesktopCPPx64,OptionId.DesktopCPPx86,OptionId.DesktopCPParm64'
           
-      - name: setup-msbuild
-        uses: microsoft/setup-msbuild@v1.1
-        with:
-          msbuild-architecture: x64
+      - name: Restore NuGet packages
+        run: dotnet restore
 
-      - name: Build Solutions
-        run: |
-         msbuild VMoveCAD.sln /p:Configuration=Release /p:Platform=x64 /p:WindowsTargetPlatformVersion=10.0.17763.0
-         msbuild VMoveCAD_Batch.sln /p:Configuration=Release /p:Platform=x64 /p:WindowsTargetPlatformVersion=10.0.17763.0
-         msbuild CadInfo.sln /p:Configuration=Release /p:Platform=x64 /p:WindowsTargetPlatformVersion=10.0.17763.0
-         msbuild VMoveCAD_MFC_GUI\VMoveCAD_MFC_GUI.sln /p:Configuration=Release /p:Platform=x64 /p:WindowsTargetPlatformVersion=10.0.17763.0
+      - name: Build the project
+        run: dotnet build VMoveCAD.sln -c Release
+
+      - name: Run tests
+        run: dotnet test VMoveCAD.sln.Tests.sln
          
           
                 
