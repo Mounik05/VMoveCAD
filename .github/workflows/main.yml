@@ -27,7 +27,6 @@ jobs:
             pathsource: VMCAD_DEP\VMoveCAD_DEPS.7z
             pathtarget: VMCAD_DEP
  
-          
       - name: Install Windows SDK
         uses: ChristopheLav/windows-sdk-install@v1
         with:
@@ -35,13 +34,13 @@ jobs:
           features: 'OptionId.DesktopCPPx64,OptionId.DesktopCPPx86,OptionId.DesktopCPParm64'
           
       - name: UseDotNet@2
-        inputs: 
-          version: '6.x'
-          includePreviewVersions: true
+        with:
+              version: '6.x'
+              includePreviewVersions: true
 
       - name: Build Solutions
         run: |
-          cd path/to/solution
+          cd ./VMoveCAD
           msbuild VMoveCAD.sln /p:Configuration=Release
           msbuild VMoveCAD_Batch.sln /p:Configuration=Release
           msbuild CadInfo.sln /p:Configuration=Release
