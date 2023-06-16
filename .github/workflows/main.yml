@@ -34,7 +34,7 @@ jobs:
           features: 'OptionId.DesktopCPPx64,OptionId.DesktopCPPx86,OptionId.DesktopCPParm64'
           
       - name: Run Local Action
-        uses: ./.github/actions/Mounik05/VMoveCAD
+        uses: actions/checkout@v2
         with:
             solutionFile: 'VMoveCAD.sln'
             configuration: 'Release'
