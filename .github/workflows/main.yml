@@ -40,7 +40,7 @@ jobs:
 
       - name: Build Solutions
         run: |
-         cd ./VMoveCAD
+         cd 'D:\a\VMoveCAD\VMoveCAD'
          msbuild VMoveCAD.sln /p:Configuration=Release
          msbuild VMoveCAD_Batch.sln /p:Configuration=Release
          msbuild CadInfo.sln /p:Configuration=Release
