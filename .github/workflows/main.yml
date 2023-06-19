@@ -43,9 +43,7 @@ jobs:
         run: |
          cd 'D:\a\VMoveCAD\VMoveCAD'
          msbuild VMoveCAD.sln /p:Configuration=Release 
-         msbuild VMoveCAD_Batch.sln /p:Configuration=Release 
-         msbuild CadInfo.sln /p:Configuration=Release 
-         msbuild VMoveCAD_MFC_GUI\VMoveCAD_MFC_GUI.sln /p:Configuration=Release 
+       
         
           
                 
