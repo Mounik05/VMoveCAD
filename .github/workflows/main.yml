@@ -13,37 +13,30 @@ jobs:
         
     steps:
       - uses: actions/checkout@v2.3.4
-
-      - name: Download the file from url
-        id: download_file  
-        uses: suisei-cn/actions-download-file@v1.0.1
+      
+      - uses: suisei-cn/actions-download-file@v1.0.1
+        id: download_file  # Remember to give an ID if you need the output filename
+        name: Download the file from url
         with:
           url: "https://downloads.vcollab.com/VCollab_Build_CI/VMoveCAD/VMoveCAD_DEPS.7z"
           target: VMCAD_DEP\
           
-      - name: Extract zip file
-        uses:  DuckSoft/extract-7z-action@v1.0
-        with:
-            pathsource: VMCAD_DEP\VMoveCAD_DEPS.7z
-            pathtarget: VMCAD_DEP
- 
-      - name: setup ms-build
+      - name: Extract Zip File
+        run: |
+          & 'C:\Program Files\7-Zip\7z.exe' x 'VMCAD_DEP\VMoveCAD_DEPS.7z' -o'VMCAD_DEP'
+             
+      - name: setup-msbuild
         uses: microsoft/setup-msbuild@v1.1
         with:
-            msbuild-architecture: x64
-             
-             
+          msbuild-architecture: x64
+
       - name: Install Windows SDK
         uses: ChristopheLav/windows-sdk-install@v1
         with:
           version-sdk: 17763
           features: 'OptionId.DesktopCPPx64,OptionId.DesktopCPPx86,OptionId.DesktopCPParm64'
           
-          
-      - name: Build Solutions
-        run: |
-               msbuild VMoveCAD.sln -t:rebuild \p:Configuration=Release \p:Platform=x64 \p:WindowsTargetPlatformVersion=10.0.17763.0 
-       
-        
+      - name: Build VMoveCAD
+        run: msbuild VMoveCAD.sln -t:rebuild /p:Configuration=Release /p:Platform=x64 /p:WindowsTargetPlatformVersion=10.0.17763.0
           
                 
