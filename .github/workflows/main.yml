@@ -34,7 +34,7 @@ jobs:
           features: 'OptionId.DesktopCPPx64,OptionId.DesktopCPPx86,OptionId.DesktopCPParm64'
           
       - name: Run Local Action
-        uses: actions/checkout@v2
+        uses: microsoft/setup-msbuild@v1.1
         with:
             solutionFile: 'VMoveCAD.sln'
             configuration: 'Release'
