@@ -10,7 +10,9 @@ jobs:
     
     env: 
       VCDEP: ..\depency
-      VC_BUILD_DIR: D:\a\VMoveCAD\VMoveCAD\VMoveCAD_MFC_GUI
+      VC_BUILD_DIR: D:\a\VMoveCAD\VMoveCAD\VMoveCAD_Batch
+      VC_BUILD_DIR1: D:\a\VMoveCAD\VMoveCAD\VMoveCAD_MFC_GUI
+      
         
     steps:
       - uses: actions/checkout@v2.3.4
