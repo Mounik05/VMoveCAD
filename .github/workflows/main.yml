@@ -1,8 +1,7 @@
 name: VCollabPro_CI
 on:
  push:
-   paths:
-     - .github/workflows/main.yml
+   branches: [ master ]
     
  workflow_dispatch:
 jobs:
@@ -11,7 +10,7 @@ jobs:
     
     env: 
       VCDEP: ..\depency
-      VC_BUILD_DIR: D:\a\VMoveCAD\VMoveCAD\VMoveCAD_MFC_GUI
+      VC_BUILD_DIR: D:\a\VMoveCAD\VMoveCAD
         
     steps:
       - uses: actions/checkout@v2.3.4
