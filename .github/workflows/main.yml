@@ -39,8 +39,8 @@ jobs:
           
       - name: Build VMoveCAD
         run: |
-           msbuild VMoveCAD.sln /p:Configuration=Release
-           msbuild VMoveCAD_Batch.sln /p:Configuration=Release
-           msbuild CadInfo.sln /p:Configuration=Release
-           msbuild VMoveCAD_MFC_GUI\VMoveCAD_MFC_GUI.sln /p:Configuration=Release
+           msbuild VMoveCAD.sln /p:Configuration=ReleaseU
+           msbuild VMoveCAD_Batch.sln /p:Configuration=ReleaseU
+           msbuild CadInfo.sln /p:Configuration=ReleaseU
+           msbuild VMoveCAD_MFC_GUI\VMoveCAD_MFC_GUI.sln /p:Configuration=ReleaseU
                 
