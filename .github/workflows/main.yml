@@ -26,7 +26,7 @@ jobs:
       - name: Extract zip file 
         uses: DuckSoft/extract-7z-action@v1.0
         with:
-           pathsource: depency\VMoveAdams_DEPS.zip
+           pathsource: depency\VMoveCAD_DEPS.7z
            pathtarget: depency
       
       - name: setup-msbuild
