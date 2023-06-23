@@ -30,6 +30,7 @@ jobs:
         run: |
          cd D:\a\VMoveCAD\VMoveCAD\dependency
          dir /b > test.txt
+         ls
        
       - name: setup-msbuild
         uses: microsoft/setup-msbuild@v1.1
