@@ -18,18 +18,18 @@ jobs:
         uses: suisei-cn/actions-download-file@v1.0.1
         with:
           url: "https://downloads.vcollab.com/VCollab_Build_CI/VMoveCAD/VMoveCAD_DEPS.7z"
-          target: dependency\
+          target: dependency\VMoveCAD_DEPS
           
       - name: Extract zip file 
         uses: DuckSoft/extract-7z-action@v1.0
         with:
-           pathsource: dependency\VMoveCAD_DEPS.7z
-           pathtarget: dependency
+           pathsource: dependency\VMoveCAD_DEPS\VMoveCAD_DEPS.7z
+           pathtarget: dependency\VMoveCAD_DEPS
            
-      - name: list of files
-        run: |
-         cd D:\a\VMoveCAD\VMoveCAD\dependency\VMoveCAD_DEPS
-         ls
+     # - name: list of files
+      #  run: |
+       #  cd D:\a\VMoveCAD\VMoveCAD\dependency\VMoveCAD_DEPS
+       #  ls
        
       - name: setup-msbuild
         uses: microsoft/setup-msbuild@v1.1
