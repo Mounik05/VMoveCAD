@@ -54,7 +54,7 @@ jobs:
          run: |
              copy "D:\a\VMoveCAD\VMoveCAD\VMoveCAD\x64\release\VMoveCADBatch.exe" "D:\a\VMoveCAD\VMoveCAD\new folder"       
              copy "D:\a\VMoveCAD\VMoveCAD\VMoveCAD\x64\release\VMoveCAD.exe" "D:\a\VMoveCAD\VMoveCAD\new folder"  
-             copy "D:\a\VMoveCAD\VMoveCAD\VMoveCAD_MFC_GUI\VMoveCAD\x64\release\VMoveCAD.exe" "D:\a\VMoveCAD\VMoveCAD\new folder"  
+             copy  "D:\a\VMoveCAD\VMoveCAD\VMoveCAD\x64\release\VMoveCAD.exe" "D:\a\VMoveCAD\VMoveCAD\new folder"  
           
       - name: upload files to ftp.
         uses: SamKirkland/FTP-Deploy-Action@4.3.2
