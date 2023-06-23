@@ -30,6 +30,12 @@ jobs:
            pathsource: dependency\VMoveCAD_DEPS.7z
            pathtarget: dependency
            
+      - name: list of files
+        run: |
+           cd  dependency
+           ls ./dependency
+     
+           
       - name: setup-msbuild
         uses: microsoft/setup-msbuild@v1.1
         with:
@@ -41,10 +47,6 @@ jobs:
           version-sdk: 17763
           features: 'OptionId.DesktopCPPx64,OptionId.DesktopCPPx86,OptionId.DesktopCPParm64'
           
-      - name: Print Folder Path
-        run: |
-          echo "Folder Path: ./dependency"
-           ls ./dependency
      
       - name: Build app for release
         run: |
