@@ -30,12 +30,10 @@ jobs:
            pathsource: dependency\VMoveCAD_DEPS.7z
            pathtarget: dependency
            
-      - name:  Print files
+      - name: Print Files in Folder
         run: |
-           cd D:\a\VMoveCAD\VMoveCAD\dependency 
-           echo "Dependency Folder Structure:"
-           ls
-         
+          echo "list of files:"
+          ls -1 D:\a\VMoveCAD\VMoveCAD\dependency | awk '{print "- " $0}'
          
       - name: setup-msbuild
         uses: microsoft/setup-msbuild@v1.1
