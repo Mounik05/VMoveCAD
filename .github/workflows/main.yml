@@ -23,7 +23,7 @@ jobs:
       - name: Extract zip file 
         uses: DuckSoft/extract-7z-action@v1.0
         with:
-           pathsource: dependency\VMoveCAD_DEPS\VMoveCAD_DEPS.7z
+           pathsource: dependency\VMoveCAD_DEPS.7z
            pathtarget: dependency
            
      # - name: list of files
