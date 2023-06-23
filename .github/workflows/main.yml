@@ -30,11 +30,9 @@ jobs:
            pathsource: dependency\VMoveCAD_DEPS.7z
            pathtarget: dependency
            
-      - name: list of files
-        run: |
-           cd  dependency
-           ls      
-           
+      - name: list of files.
+        run:  .\list.bat
+        
       - name: setup-msbuild
         uses: microsoft/setup-msbuild@v1.1
         with:
