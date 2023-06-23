@@ -2,31 +2,33 @@ name: VCollabPro_CI
 on:
  push:
    branches: [ master ]
-    
+ pull_request:
+    branches: [ master ]
+
  workflow_dispatch:
+
 jobs:
- build:
+  build:
     runs-on: windows-latest
     
     env: 
-      VCDEP: ..\depency
+      VCDEP: ..\dependency
       VC_BUILD_DIR: D:\a\VMoveCAD\VMoveCAD\VMoveCAD_MFC_GUI
     
     steps:
       - uses: actions/checkout@v2.3.4
       
-      - uses: suisei-cn/actions-download-file@v1.0.1
-        id: download_file  # Remember to give an ID if you need the output filename
-        name: Download the file from url
+      - name: Download the file from url
+        uses: suisei-cn/actions-download-file@v1.0.1
         with:
           url: "https://downloads.vcollab.com/VCollab_Build_CI/VMoveCAD/VMoveCAD_DEPS.7z"
-          target: depency
+          target: dependency
           
       - name: Extract zip file 
         uses: DuckSoft/extract-7z-action@v1.0
         with:
-           pathsource: depency\VMoveCAD_DEPS.7z
-           pathtarget: depency
+           pathsource: dependency\VMoveCAD_DEPS.7z
+           pathtarget: dependency
       
       - name: setup-msbuild
         uses: microsoft/setup-msbuild@v1.1
