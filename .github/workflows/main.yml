@@ -32,8 +32,8 @@ jobs:
            
       - name: Print Files in Folder
         run: |
-          echo "list of files:"
-          ls -1 D:\a\VMoveCAD\VMoveCAD\dependency | awk '{print "- " $0}'
+          cd dependency
+          ls  D:\a\VMoveCAD\VMoveCAD\dependency 
          
       - name: setup-msbuild
         uses: microsoft/setup-msbuild@v1.1
