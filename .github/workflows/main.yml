@@ -8,7 +8,7 @@ jobs:
     runs-on: windows-latest
     
     env: 
-      VMCAD_DEP: ..\dependency\VMoveCAD_DEPS
+      VMCAD_DEP: D:\a\VMoveCAD\VMoveCAD\dependency\VMoveCAD_DEPS
       VC_BUILD_DIR: D:\a\VMoveCAD\VMoveCAD\VMoveCAD_MFC_GUI
     
     steps:
