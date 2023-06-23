@@ -44,6 +44,7 @@ jobs:
       - name: Print Folder Path
         run: |
           echo "Folder Path: ./VMoveCAD_MFC_GUI"
+           ls ./VMoveCAD_MFC_GUI
           
       - name: Build app for release
         run: |
