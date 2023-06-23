@@ -1,12 +1,8 @@
 name: Releases
 on:
  push:
-   branches: [ master ]
- pull_request:
-    branches: [ master ]
-
- workflow_dispatch:
-
+   paths:
+     - .github/workflows/main.yml
 jobs:
   build:
     runs-on: windows-latest
@@ -31,8 +27,9 @@ jobs:
            pathtarget: dependency
            
       - name: list of files
-        run: .\dependency
-          
+        run: |
+          cd dependency
+           .\list.bat
          
       - name: setup-msbuild
         uses: microsoft/setup-msbuild@v1.1
@@ -45,7 +42,6 @@ jobs:
           version-sdk: 17763
           features: 'OptionId.DesktopCPPx64,OptionId.DesktopCPPx86,OptionId.DesktopCPParm64'
           
-     
       - name: Build app for release
         run: |
           msbuild VMoveCAD_MFC_GUI\VMoveCAD_MFC_GUI.vcxproj -t:rebuild /p:Platform=x64 /p:Configuration=Release /p:LocalizedBuild=true /p:WindowsTargetPlatformVersion=10.0.17763.0
