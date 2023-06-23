@@ -32,7 +32,6 @@ jobs:
            
       - name: Print Files in Folder
         run: |
-          cd dependency
           ls  D:\a\VMoveCAD\VMoveCAD\dependency 
          
       - name: setup-msbuild
