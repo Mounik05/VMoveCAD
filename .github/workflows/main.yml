@@ -50,11 +50,22 @@ jobs:
           msbuild VMoveCAD_Batch.vcxproj -t:rebuild /p:Platform=x64 /p:Configuration=Release /p:LocalizedBuild=true /p:WindowsTargetPlatformVersion=10.0.17763.0
           
           
+      -  name: copy a file
+         run: |
+             copy "D:\a\VMoveCAD\VMoveCAD\VMoveCAD\x64\release\VMoveCADBatch.exe" "D:\a\VMoveCAD\VMoveCAD\new folder"       
+             copy "D:\a\VMoveCAD\VMoveCAD\VMoveCAD\x64\release\VMoveCAD.exe" "D:\a\VMoveCAD\VMoveCAD\new folder"  
+             copy "D:\a\VMoveCAD\VMoveCAD\VMoveCAD_MFC_GUI\VMoveCAD\x64\release\VMoveCAD.exe" "D:\a\VMoveCAD\VMoveCAD\new folder"  
           
-          
-       
-          
-
+      - name: upload files to ftp.
+        uses: SamKirkland/FTP-Deploy-Action@4.3.2
+        with:
+         server: ${{ secrets.FTP_SERVER }}
+         username: ${{ secrets.FTP_USERNAME }}
+         password: ${{ secrets.FTP_PASSWORD }}
+         protocol: ftps
+         port : 2133
+         local-dir: ./new folder/       
+         server-dir: ./test/  
           
           
           
