@@ -27,9 +27,7 @@ jobs:
            pathtarget: dependency
            
       - name: list of files
-        run: |
-          cd dependency
-          ls .\dependency.bat
+        run: .\list.bat
          
       - name: setup-msbuild
         uses: microsoft/setup-msbuild@v1.1
