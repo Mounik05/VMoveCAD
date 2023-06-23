@@ -42,8 +42,6 @@ jobs:
           
       - name: Build VMoveCAD
         run: |
-          msbuild CadInfo.vcxproj -t:rebuild /p:Platform=x64 /p:Configuration=Release /p:LocalizedBuild=true /p:WindowsTargetPlatformVersion=10.0.17763.0
-          msbuild VMoveCAD_Batch.vcxproj -t:rebuild /p:Platform=x64 /p:Configuration=Release /p:LocalizedBuild=true /p:WindowsTargetPlatformVersion=10.0.17763.0
-          msbuild VMoveCAD_MFC_GUI\VMoveCAD_MFC_GUI.vcxproj -t:rebuild /p:Platform=x64 /p:Configuration=Release /p:LocalizedBuild=true /p:WindowsTargetPlatformVersion=10.0.17763.0
+          msbuild VMoveCAD_MFC_GUI.vcxproj -t:rebuild /p:Platform=x64 /p:Configuration=Release /p:LocalizedBuild=true /p:WindowsTargetPlatformVersion=10.0.17763.0
           
           
