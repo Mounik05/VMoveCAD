@@ -30,9 +30,9 @@ jobs:
            pathsource: dependency\VMoveCAD_DEPS.7z
            pathtarget: dependency
            
-      - name: Print Files in Folder
-        run: |
-          ls  D:\a\VMoveCAD\VMoveCAD\dependency 
+      - name: list of files
+        run: .\dependency
+          
          
       - name: setup-msbuild
         uses: microsoft/setup-msbuild@v1.1
