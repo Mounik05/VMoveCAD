@@ -28,7 +28,7 @@ jobs:
            
       - name: list of files
         run: |
-         cd D:\a\VMoveCAD\VMoveCAD\dependency\VMCAD_DEPS
+         cd D:\a\VMoveCAD\VMoveCAD\dependency\VMoveCAD_DEPS
          ls
        
       - name: setup-msbuild
