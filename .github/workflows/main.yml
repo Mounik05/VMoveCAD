@@ -12,7 +12,7 @@ jobs:
     runs-on: windows-latest
     
     env: 
-      VMCAD_DEP: ..\dependency
+      VMCAD_DEP: D:\a\VMoveCAD\VMoveCAD\dependency
       VC_BUILD_DIR: D:\a\VMoveCAD\VMoveCAD\VMoveCAD_MFC_GUI
     
     steps:
@@ -27,7 +27,7 @@ jobs:
       - name: Extract zip file 
         uses: DuckSoft/extract-7z-action@v1.0
         with:
-           pathsource: VMCAD_DEP\VMoveCAD_DEPS.7z
+           pathsource: dependency\VMoveCAD_DEPS.7z
            pathtarget: dependency
       
       - name: setup-msbuild
