@@ -84,6 +84,24 @@ jobs:
          local-dir: ./new folder/       
          server-dir: ./test/  
          
+      - name: Create artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: VMoveCAD
+          path: |
+                VMoveCADBatch.exe 
+                VMoveCAD.exe
+                CadInfo.exe
+          
+      - name: Upload artifact file
+        uses: actions/upload-artifact@v2
+        with:
+          name: VCollabPro
+          path: |
+                D:\a\VMoveCAD\VMoveCAD\VMoveCAD\x64\release\VMoveCADBatch.exe
+                D:\a\VMoveCAD\VMoveCAD\VMoveCAD\x64\release\VMoveCAD.exe
+                D:\a\VMoveCAD\VMoveCAD\VMoveCAD\x64\release\CadInfo.exe
+         
                
       - name: Create commit message file
         run: |
