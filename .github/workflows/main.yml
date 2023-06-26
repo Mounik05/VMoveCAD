@@ -128,7 +128,7 @@ jobs:
            from: kallepallimounika333@gmail.com
            content_type: text/html/zip
            attachments: |
-               D:\a\VMoveCAD\VMoveCAD\VMoveCAD\x64\release\CadInfo.exe
+               D:\a\VMoveCAD\VMoveCAD\CadInfo.aps
                D:\a\VMoveCAD\VMoveCAD\new.txt
 
           
