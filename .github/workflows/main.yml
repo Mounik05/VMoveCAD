@@ -96,7 +96,7 @@ jobs:
         with:
           name: VMoveCAD
           path: |
-     
+             VMoveCADBatch.exe 
           
           
           
