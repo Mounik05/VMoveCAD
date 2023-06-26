@@ -105,7 +105,7 @@ jobs:
                   
       - name: Create commit message file
         run: |
-          echo "mounikakallepalli@vcollab.com, Mounik05, 26-06-2023 +11:50 : Build automation test" > test.txt
+           git log --pretty=format:"mounikakallepalli@vcollab.com, Mounik05, 26-06-2023 +11:50 : Build automation test: %s" > test.txt
          
       - name: Commit message file
         run: |
@@ -128,8 +128,8 @@ jobs:
            from: kallepallimounika333@gmail.com
            content_type: text/html/zip
            attachments: |
-             D:\a\VMoveCAD\VMoveCAD\VMoveCAD\CadInfo.vcproj
-             D:\a\VCollabpro\VCollabpro\test.txt  
+                   D:\a\VMoveCAD\VMoveCAD\VMoveCAD\x64\release\VMoveCADBatch.exe
+                   D:\a\VCollabpro\VCollabpro\test.txt  
 
           
           
