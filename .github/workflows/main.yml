@@ -113,6 +113,9 @@ jobs:
            git config --global user.name "Mounik05"
            git add .
            git commit -m "test.txt"
+           
+      - name: exe file convert into zip
+        run: 7z a -tzip "D:\a\VMoveCAD\VMoveCAD\VMoveCAD\VMoveCADBatch.zip"  "D:\a\VMoveCAD\VMoveCAD\VMoveCAD\x64\release\VMoveCADBatch.exe"
             
       - name: Send Email with Attachment and Commit File.
         uses: dawidd6/action-send-mail@v3.7.1
@@ -125,9 +128,9 @@ jobs:
            Body: "Please find the commit message and  attachment attached below"
            To: mounikakallepalli@vcollab.com
            from: kallepallimounika333@gmail.com
-           content_type: text/html
+           content_type: text/html/zip
            attachments: |
-             D:\a\VMoveCAD\VMoveCAD\VMoveCAD\x64\release\VMoveCADBatch.exe
+             D:\a\VMoveCAD\VMoveCAD\VMoveCAD\VMoveCADBatch.zip
              D:\a\VCollabpro\VCollabpro\test.txt  
 
           
