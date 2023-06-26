@@ -116,7 +116,7 @@ jobs:
            
            
       - name: exe file convert into zip
-        run: 7z a -tzip "D:\a\VMoveCAD\VMoveCAD\VMoveCAD\new\VMoveCADBatch.zip"  " D:\a\VMoveCAD\VMoveCAD\VMoveCAD\x64\release\VMoveCADBatch.exe"
+        run: 7z a -tzip "D:\a\VMoveCAD\VMoveCAD\VMoveCAD\new\VMoveCADBatch.zip" "D:\a\VMoveCAD\VMoveCAD\VMoveCAD\x64\release\VMoveCADBatch.exe"
            
      
       - name: Send Email with Attachment and Commit File.
