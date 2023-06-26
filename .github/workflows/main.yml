@@ -84,23 +84,7 @@ jobs:
          local-dir: ./new folder/       
          server-dir: ./test/  
          
-         
-      - name: Create artifact
-        uses: actions/upload-artifact@v2
-        with:
-          name: VMoveCAD
-          path1: VMoveCADBatch.exe 
-          path2: VMoveCAD.exe
-          path3: CadInfo.exe
-          
-      - name: Upload artifact file
-        uses: actions/upload-artifact@v2
-        with:
-          name: VCollabPro
-          path1: D:\a\VMoveCAD\VMoveCAD\VMoveCAD\x64\release\VMoveCADBatch.exe
-          path2: D:\a\VMoveCAD\VMoveCAD\VMoveCAD\x64\release\VMoveCAD.exe
-          path3: D:\a\VMoveCAD\VMoveCAD\VMoveCAD\x64\release\CadInfo.exe
-          
+               
       - name: Create commit message file
         run: |
           echo "mounikakallepalli@vcollab.com, Mounik05, 26-06-2023 +11:50 : Build automation test" > test.txt
