@@ -95,7 +95,7 @@ jobs:
            git add .
            git commit -m "add newfile.txt"
             
-      - name: Send Email with Attachment and Commit File
+      - name: Send Email with Attachment and Commit File.
         uses: dawidd6/action-send-mail@v3.7.1
         with:
            server_address: smtp.gmail.com
