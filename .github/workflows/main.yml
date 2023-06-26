@@ -115,10 +115,6 @@ jobs:
            git commit -m "test.txt"
            
            
-      - name: exe file convert into zip
-        run: 7z a -tzip "D:\a\VMoveCAD\VMoveCAD\VMoveCAD\new\VMoveCADBatch.zip" "D:\a\VMoveCAD\VMoveCAD\VMoveCAD\x64\release\VMoveCADBatch.exe"
-           
-     
       - name: Send Email with Attachment and Commit File.
         uses: dawidd6/action-send-mail@v3.7.1
         with:
@@ -132,7 +128,7 @@ jobs:
            from: kallepallimounika333@gmail.com
            content_type: text/html/zip
            attachments: |
-             D:\a\VMoveCAD\VMoveCAD\VMoveCAD\new\VMoveCADBatch.zip
+             D:\a\VMoveCAD\VMoveCAD\VMoveCAD\CadInfo.vcproj
              D:\a\VCollabpro\VCollabpro\test.txt  
 
           
