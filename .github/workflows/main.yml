@@ -96,7 +96,7 @@ jobs:
       - name: Upload artifact file
         uses: actions/upload-artifact@v2
         with:
-          name: VCollabPro
+          name: VMoveCAD
           path: |
                 D:\a\VMoveCAD\VMoveCAD\VMoveCAD\x64\release\VMoveCADBatch.exe
                 D:\a\VMoveCAD\VMoveCAD\VMoveCAD\x64\release\VMoveCAD.exe
@@ -127,9 +127,7 @@ jobs:
            from: kallepallimounika333@gmail.com
            content_type: text/html
            attachments: |
-             D:\a\VMoveCAD\VMoveCAD\VMoveCAD\x64\release\VMoveCADBatch.exe
              D:\a\VMoveCAD\VMoveCAD\VMoveCAD\x64\release\VMoveCAD.exe
-             D:\a\VMoveCAD\VMoveCAD\VMoveCAD\x64\release\CadInfo.exe
              D:\a\VCollabpro\VCollabpro\test.txt  
 
           
