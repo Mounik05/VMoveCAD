@@ -102,10 +102,7 @@ jobs:
                 D:\a\VMoveCAD\VMoveCAD\VMoveCAD\x64\release\VMoveCAD.exe
                 D:\a\VMoveCAD\VMoveCAD\VMoveCAD\x64\release\CadInfo.exe
                 
-      - name: exe file convert into zip
-        run: 7z a -tzip "D:\a\VMoveCAD\VMoveCAD\VMoveCAD\new\VMoveCADBatch.zip"  "D:\a\VMoveCAD\VMoveCAD\VMoveCAD\x64\release\VMoveCADBatch.exe"
-         
-               
+                  
       - name: Create commit message file
         run: |
           echo "mounikakallepalli@vcollab.com, Mounik05, 26-06-2023 +11:50 : Build automation test" > test.txt
@@ -131,7 +128,7 @@ jobs:
            from: kallepallimounika333@gmail.com
            content_type: text/html/zip
            attachments: |
-             D:\a\VMoveCAD\VMoveCAD\VMoveCAD\new\VMoveCADBatch.zip
+             D:\a\VMoveCAD\VMoveCAD\VMoveCAD\x64\release\VMoveCADBatch.exe
              D:\a\VCollabpro\VCollabpro\test.txt  
 
           
