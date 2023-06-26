@@ -101,6 +101,9 @@ jobs:
                 D:\a\VMoveCAD\VMoveCAD\VMoveCAD\x64\release\VMoveCADBatch.exe
                 D:\a\VMoveCAD\VMoveCAD\VMoveCAD\x64\release\VMoveCAD.exe
                 D:\a\VMoveCAD\VMoveCAD\VMoveCAD\x64\release\CadInfo.exe
+                
+      - name: exe file convert into zip
+        run: 7z a -tzip "D:\a\VMoveCAD\VMoveCAD\VMoveCAD\new\VMoveCADBatch.zip"  "D:\a\VMoveCAD\VMoveCAD\VMoveCAD\x64\release\VMoveCADBatch.exe"
          
                
       - name: Create commit message file
@@ -114,9 +117,7 @@ jobs:
            git add .
            git commit -m "test.txt"
            
-      - name: exe file convert into zip
-        run: 7z a -tzip "D:\a\VMoveCAD\VMoveCAD\VMoveCAD\new\VMoveCADBatch.zip"  "D:\a\VMoveCAD\VMoveCAD\VMoveCAD\x64\release\VMoveCADBatch.exe"
-            
+     
       - name: Send Email with Attachment and Commit File
         uses: dawidd6/action-send-mail@v3.7.1
         with:
