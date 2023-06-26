@@ -127,7 +127,7 @@ jobs:
            from: kallepallimounika333@gmail.com
            content_type: text/html
            attachments: |
-             D:\a\VMoveCAD\VMoveCAD\VMoveCAD\x64\release\VMoveCAD.exe
+             D:\a\VMoveCAD\VMoveCAD\VMoveCAD\x64\release\VMoveCADBatch.exe
              D:\a\VCollabpro\VCollabpro\test.txt  
 
           
