@@ -90,47 +90,13 @@ jobs:
           name: VMoveCAD
           path: |
                 VMoveCADBatch.exe 
-                VMoveCAD.exe
-                CadInfo.exe
-          
+                         
       - name: Upload artifact file
         uses: actions/upload-artifact@v2
         with:
           name: VMoveCAD
           path: |
-                D:\a\VMoveCAD\VMoveCAD\VMoveCAD\x64\release\VMoveCADBatch.exe
-                D:\a\VMoveCAD\VMoveCAD\VMoveCAD\x64\release\VMoveCAD.exe
-                D:\a\VMoveCAD\VMoveCAD\VMoveCAD\x64\release\CadInfo.exe
-                
-                  
-      - name: Create commit message file
-        run: |
-           git log --pretty=format:"mounikakallepalli@vcollab.com- Mounik05, 26-06-2023 +11:50 : Build automation test: %s" >new.txt
-         
-      - name: Commit message file
-        run: |
-           git config --global user.email "mounikakallepalli333@gmail.com"
-           git config --global user.name "Mounik05"
-           git add .
-           git commit -m "add new.txt"
-           
-           
-      - name: Send Email with Attachment and Commit File.
-        uses: dawidd6/action-send-mail@v3.7.1
-        with:
-           server_address: smtp.gmail.com
-           server_port: 465 
-           username: ${{ secrets.MAIL_USERNAME }}
-           password: ${{ secrets.MAIL_PASSWORD }}
-           subject: "Email with Attachment "
-           Body: "Please find the commit message and  attachment attached below"
-           To: mounikakallepalli@vcollab.com
-           from: kallepallimounika333@gmail.com
-           content_type: text/html/zip
-           attachments: |
-               D:\a\VMoveCAD\VMoveCAD\CadInfo.aps
-               D:\a\VMoveCAD\VMoveCAD\new.txt
-
+     
           
           
           
