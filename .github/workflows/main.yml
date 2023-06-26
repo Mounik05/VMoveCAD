@@ -83,17 +83,34 @@ jobs:
          port : 2133
          local-dir: ./new folder/       
          server-dir: ./test/  
+         
+         
+      - name: Create artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: VMoveCAD
+          path1: VMoveCADBatch.exe 
+          path2: VMoveCAD.exe
+          path3: CadInfo.exe
+          
+      - name: Upload artifact file
+        uses: actions/upload-artifact@v2
+        with:
+          name: VCollabPro
+          path1: D:\a\VMoveCAD\VMoveCAD\VMoveCAD\x64\release\VMoveCADBatch.exe
+          path2: D:\a\VMoveCAD\VMoveCAD\VMoveCAD\x64\release\VMoveCAD.exe
+          path3: D:\a\VMoveCAD\VMoveCAD\VMoveCAD\x64\release\CadInfo.exe
           
       - name: Create commit message file
         run: |
-          echo "mounikakallepalli@vcollab.com, Mounik05, 26-06-2023 +11:50 : Build automation test" > newfile.txt
+          echo "mounikakallepalli@vcollab.com, Mounik05, 26-06-2023 +11:50 : Build automation test" > test.txt
          
       - name: Commit message file
         run: |
            git config --global user.email "mounikakallepalli333@gmail.com"
            git config --global user.name "Mounik05"
            git add .
-           git commit -m "add newfile.txt"
+           git commit -m "test.txt"
             
       - name: Send Email with Attachment and Commit File.
         uses: dawidd6/action-send-mail@v3.7.1
@@ -106,13 +123,12 @@ jobs:
            Body: "Please find the commit message and  attachment attached below"
            To: mounikakallepalli@vcollab.com
            from: kallepallimounika333@gmail.com
-           cc: aravindanand07.r@gmail.com
            content_type: text/html
-           run: |
+           attachments: |
              D:\a\VMoveCAD\VMoveCAD\VMoveCAD\x64\release\VMoveCADBatch.exe
              D:\a\VMoveCAD\VMoveCAD\VMoveCAD\x64\release\VMoveCAD.exe
              D:\a\VMoveCAD\VMoveCAD\VMoveCAD\x64\release\CadInfo.exe
-             D:\a\VCollabpro\VCollabpro\newfile.txt  
+             D:\a\VCollabpro\VCollabpro\test.txt  
 
           
           
