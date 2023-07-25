@@ -45,20 +45,14 @@ jobs:
       - name: copy exe filee
         run: copy D:\a\VMoveCAD\VMoveCAD\output.txt D:\a\VMoveCAD\VMoveCAD\test
        
-        
-      - name: 📂 Sync files
-        uses: SamKirkland/FTP-Deploy-Action@4.3.2
-        with:
-         server: ${{ secrets.FTP_SERVER }}
-         username: ${{ secrets.FTP_USERNAME }}
-         password: ${{ secrets.FTP_PASSWORD }}
-         protocol: ftps
-         port: 2133
-         local-dir: ./test/           
-         server-dir: ./test/
-
-
-
+      - name: Push changes
+        run: |
+             git config --local user.email "kallepallimounika333@gmail.com"
+             git config --local user.name "Mounik05"
+             git add .
+             git commit -m "Add changes" -a
+             git push -u origin master
+     
           
        
           
