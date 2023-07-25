@@ -8,10 +8,9 @@ jobs:
     runs-on: windows-latest
     
     env: 
-      VMCAD_DEP: D:\a\VMoveCAD\VMoveCAD\dependency\VMoveCAD_DEPS
-      VC_BUILD_DIR: D:\a\VMoveCAD\VMoveCAD
-      VC_BUILD_DIR1: D:\a\VMoveCAD\VMoveCAD\VMoveCAD_MFC_GUI
-    
+     VMCAD_DEP: D:\a\VMoveCAD\VMoveCAD\dependency\VMoveCAD_DEPS
+     VC_BUILD_DIR: D:\a\VMoveCAD\VMoveCAD\VMoveCAD_MFC_GUI
+      
     steps:
       - uses: actions/checkout@v2.3.4
       
