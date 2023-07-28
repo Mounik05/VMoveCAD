@@ -51,7 +51,7 @@ jobs:
              copy "D:\a\VMoveCAD\VMoveCAD\VMoveCAD\x64\release\VMoveCAD.exe" "D:\a\VMoveCAD\VMoveCAD\vmovecadexe"  
              copy "D:\a\VMoveCAD\VMoveCAD\VMoveCAD\x64\release\CadInfo.exe" "D:\a\VMoveCAD\VMoveCAD\vmovecadexe" 
           
-      - name: log files uploaded to ftp
+      - name: log files uploaded to ftp.
         uses: SamKirkland/FTP-Deploy-Action@4.3.2
         with:
          server: ${{ secrets.FTP_SERVER }}
