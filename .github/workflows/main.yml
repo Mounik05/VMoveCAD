@@ -41,16 +41,15 @@ jobs:
           
       - name: Build app for release
         run: |
-            msbuild VMoveCAD.sln -t:rebuild /p:Platform=x64 /p:Configuration=Release /p:LocalizedBuild=true /p:WindowsTargetPlatformVersion=10.0.17763.0 > cadlog.txt -m
-            msbuild VMoveCAD_MFC_GUI\VMoveCAD_MFC_GUI.vcxproj -t:rebuild /p:Platform=x64 /p:Configuration=Release /p:LocalizedBuild=true /p:WindowsTargetPlatformVersion=10.0.17763.0> cadlog_log.txt -m
-            msbuild VMoveCAD_Batch.vcxproj -t:rebuild /p:Platform=x64 /p:Configuration=Release /p:LocalizedBuild=true /p:WindowsTargetPlatformVersion=10.0.17763.0 > cadlog_log.txt -m
-           
+            msbuild VMoveCAD.sln -t:rebuild /p:Platform=x64 /p:Configuration=Release /p:LocalizedBuild=true /p:WindowsTargetPlatformVersion=10.0.17763.0 > cadlog.txt
+            msbuild VMoveCAD_MFC_GUI\VMoveCAD_MFC_GUI.vcxproj -t:rebuild /p:Platform=x64 /p:Configuration=Release /p:LocalizedBuild=true /p:WindowsTargetPlatformVersion=10.0.17763.0 > cadlog.txt
+            msbuild VMoveCAD_Batch.vcxproj -t:rebuild /p:Platform=x64 /p:Configuration=Release /p:LocalizedBuild=true /p:WindowsTargetPlatformVersion=10.0.17763.0 > cadlog.txt
            
       -  name: copy a file
          run: |
-             copy "D:\a\VMoveCAD\VMoveCAD\cadlog.txt" "D:\a\VMoveCAD\VMoveCAD\new folder"       
-             copy "D:\a\VMoveCAD\VMoveCAD\cadlog.txt" "D:\a\VMoveCAD\VMoveCAD\new folder"  
-             copy  "D:\a\VMoveCAD\VMoveCAD\cadlog.txt" "D:\a\VMoveCAD\VMoveCAD\new folder"  
+             copy "D:\a\VMoveCAD\VMoveCAD\VMoveCAD\x64\release\VMoveCADBatch.exe" "D:\a\VMoveCAD\VMoveCAD\vmovecadexe"       
+             copy "D:\a\VMoveCAD\VMoveCAD\VMoveCAD\x64\release\VMoveCAD.exe" "D:\a\VMoveCAD\VMoveCAD\vmovecadexe"  
+             copy "D:\a\VMoveCAD\VMoveCAD\VMoveCAD\x64\release\CadInfo.exe" "D:\a\VMoveCAD\VMoveCAD\vmovecadexe" 
           
       - name: log files uploaded to ftp
         uses: SamKirkland/FTP-Deploy-Action@4.3.2
@@ -60,7 +59,7 @@ jobs:
          password: ${{ secrets.FTP_PASSWORD }}
          protocol: ftps
          port : 2133
-         local-dir: ./new folder/       
+         local-dir: ./vmovecadexe/       
          server-dir: ./test/  
           
           
@@ -76,7 +75,7 @@ jobs:
              VMoveCAD build was success.
              https://downloads.vcollab.com/aravinth/test/VMoveCADBatch.exe
              https://downloads.vcollab.com/aravinth/test/VMoveCAD.exe
-             https://downloads.vcollab.com/aravinth/test/VMoveCAD.exe
+             https://downloads.vcollab.com/aravinth/test/CadInfo.exe
              
           To: mounikakallepalli@vcollab.com
           from: Kallepallimounika333@gmail.com
@@ -98,7 +97,5 @@ jobs:
           content_type: text/html
           attachments: |
              D:\a\VMoveCAD\VMoveCAD\cadlog.txt
-             D:\a\VMoveCAD\VMoveCAD\cadlog.txt           
-             D:\a\VMoveCAD\VMoveCAD\cadlog.txt
-   
+             
           
