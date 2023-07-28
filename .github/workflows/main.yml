@@ -56,7 +56,7 @@ jobs:
           from: Kallepallimounika333@gmail.com
           content_type: text/html
          
-      - name: Send email notification on failure
+      - name: Send email notification on failure.
         if: ${{ failure() }}
         uses: dawidd6/action-send-mail@v3.7.1
         with:
