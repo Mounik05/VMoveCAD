@@ -42,19 +42,35 @@ jobs:
         run: |
           msbuild  D:\a\VMoveCAD\VMoveCAD\VMoveCAD_MFC_GUI\VMoveCAD_MFC_GUI.vcxproj -t:rebuild /p:Platform=x64 /p:Configuration=Release /p:LocalizedBuild=true /p:WindowsTargetPlatformVersion=10.0.17763.0  > output.txt -m 
           
-      - name: copy exe filee
-        run: copy D:\a\VMoveCAD\VMoveCAD\output.txt D:\a\VMoveCAD\VMoveCAD\test
-       
-      - name: Push changes
-        run: |
-             git config --local user.email "kallepallimounika333@gmail.com"
-             git config --local user.name "Mounik05"
-             git add .
-             git commit -m "Add changes" -a
-             git push -u origin master
-     
-          
-       
+      - name: Send email notification on success
+        uses: dawidd6/action-send-mail@v3.7.1
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465 
+          username: ${{ secrets.MAIL_USERNAME }}
+          password: ${{ secrets.MAIL_PASSWORD }}
+          subject:  job status Notification
+          Body: |
+             VMoveCAD build was success 
+          To: mounikakallepalli@vcollab.com
+          from: Kallepallimounika333@gmail.com
+          content_type: text/html
+         
+      - name: Send email notification on failure
+        if: ${{ failure() }}
+        uses: dawidd6/action-send-mail@v3.7.1
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465 
+          username: ${{ secrets.MAIL_USERNAME }}
+          password: ${{ secrets.MAIL_PASSWORD }}
+          subject:  job status Notification
+          Body: |
+            VMoveCAD build was failure
+          To: mounikakallepalli@vcollab.com
+          from: Kallepallimounika333@gmail.com
+          content_type: text/html
+         
           
 
       
