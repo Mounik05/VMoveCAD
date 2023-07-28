@@ -97,5 +97,9 @@ jobs:
           content_type: text/html
           attachments: |
              D:\a\VMoveCAD\VMoveCAD\cadlog.txt
+             D:\a\VMoveCAD\VMoveCAD\cadlog.txt
+             D:\a\VMoveCAD\VMoveCAD\cadlog.txt
+      
+      
              
           
