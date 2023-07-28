@@ -19,7 +19,7 @@ jobs:
       - name: Download the file from url
         uses: suisei-cn/actions-download-file@v1.0.1
         with:
-          url: "https://downloads.vcollab.com/VCollab_Build_CI/VMoveCAD/VMoveCAD_DEPS.7z"
+          url: "https://downloads.vcollab.com/VCollab_Build_CI/VMoveCAD/VMoveCAD_DEPS1.7z"
           target: dependency
           
       - name: Extract zip file 
