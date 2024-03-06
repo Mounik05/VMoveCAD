@@ -99,7 +99,57 @@ jobs:
              D:\a\VMoveCAD\VMoveCAD\cadlog.txt
              D:\a\VMoveCAD\VMoveCAD\cadlog.txt
              D:\a\VMoveCAD\VMoveCAD\cadlog.txt
-      
+
+      - name: Upload VMoveCAD.exe
+        uses: actions/upload-artifact@v2
+        with:
+          name: VMoveCAD.exe
+          path:  D:\a\VMoveCAD\VMoveCAD\VMoveCAD\x64\release\VMoveCAD.exe
+          
+      - name: Download artifact 
+        uses: actions/download-artifact@v3
+        with:
+          name: VMoveCAD.exe
+      - name: archive site content
+        uses: thedoctor0/zip-release@master
+        with:
+           filename: VMoveCAD.exe.zip
+
+         
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: v1.0.0
+          release_name:   VMoveCAD.exe
+
+          body: |
+            # Release Notes
+
+            This is the first release of my project.
+
+            ## Features
+
+            - first change
+            - second change
+
+          draft: false
+          prerelease: false
+          
+      - name: Upload Release Asset
+        id: upload-release-asset 
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
+          asset_path: ./ VMoveCAD.exe.zip
+          asset_name:  VMoveCAD.exe.exe.zip
+          asset_content_type: application/zip    
+        
+     
       
              
           
